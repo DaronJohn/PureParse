@@ -10,7 +10,6 @@
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev)
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v4-38BDF8?logo=tailwindcss)](https://tailwindcss.com)
 [![Tesseract.js](https://img.shields.io/badge/Tesseract.js-7.0-orange)](https://tesseract.projectnaptha.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 </div>
 
@@ -113,9 +112,3 @@ PureParse/
 **Daron John** — [@yesdaron](https://x.com/yesdaron?s=11) · [GitHub](https://github.com/DaronJohn)
 
 Made with ❤️ by Daron John.
-
----
-
-## License
-
-[MIT](LICENSE)
