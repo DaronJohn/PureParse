@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="public/next.svg" width="40" alt="PureParse logo" />
-
 # PureParse
 
 **Instant, private image-to-text extraction — 100% in your browser.**
@@ -109,6 +107,6 @@ PureParse/
 
 ## Author
 
-**Daron John** — [@yesdaron](https://x.com/yesdaron?s=11) · [GitHub](https://github.com/DaronJohn)
+**Daron John** — [Twitter](https://x.com/yesdaron?s=11) · [GitHub](https://github.com/DaronJohn)
 
 Made with ❤️ by Daron John.
