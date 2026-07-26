@@ -52,8 +52,8 @@ function Navbar({ darkMode, toggleDark }: NavbarProps) {
   return (
     <nav
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled
-          ? "bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm shadow-sm border-b border-gray-100 dark:border-slate-800"
-          : "bg-transparent"
+        ? "bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm shadow-sm border-b border-gray-100 dark:border-slate-800"
+        : "bg-transparent"
         }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -183,14 +183,14 @@ function UploadZone({ onFile, isDragOver, setIsDragOver }: UploadZoneProps) {
       onClick={() => inputRef.current?.click()}
       onKeyDown={(e) => e.key === "Enter" && inputRef.current?.click()}
       className={`relative flex flex-col items-center justify-center gap-4 rounded-2xl border-2 border-dashed cursor-pointer select-none transition-all duration-200 py-14 px-8 ${isDragOver
-          ? "border-blue-400 bg-blue-50 dark:bg-blue-950/30"
-          : "border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-blue-300 dark:hover:border-blue-600 hover:bg-gray-50/60 dark:hover:bg-slate-800/60"
+        ? "border-blue-400 bg-blue-50 dark:bg-blue-950/30"
+        : "border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-blue-300 dark:hover:border-blue-600 hover:bg-gray-50/60 dark:hover:bg-slate-800/60"
         }`}
     >
       <div
         className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-200 ${isDragOver
-            ? "bg-blue-100 dark:bg-blue-900/40"
-            : "bg-gray-100 dark:bg-slate-800"
+          ? "bg-blue-100 dark:bg-blue-900/40"
+          : "bg-gray-100 dark:bg-slate-800"
           }`}
       >
         <Upload
@@ -340,8 +340,8 @@ function ResultPanel({ text, imagePreview, onReset }: ResultPanelProps) {
               onClick={handleCopy}
               aria-label="Copy extracted text to clipboard"
               className={`inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg transition-all duration-200 ${copied
-                  ? "bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 border border-green-100 dark:border-green-800"
-                  : "bg-gray-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-gray-100 dark:border-slate-700 hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-100 dark:hover:border-blue-800"
+                ? "bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 border border-green-100 dark:border-green-800"
+                : "bg-gray-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-gray-100 dark:border-slate-700 hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-100 dark:hover:border-blue-800"
                 }`}
             >
               {copied ? (
@@ -480,14 +480,14 @@ Acme Corporation
 San Francisco, CA 94105
 
 Services Rendered:
-- Design System Audit    $2,400.00
-- UI Component Library   $3,800.00
-- Accessibility Review   $1,200.00
+- Design System Audit    ₹2,400.00
+- UI Component Library   ₹3,800.00
+- Accessibility Review   ₹1,200.00
 
-Subtotal               $7,400.00
-Tax (8.5%)               $629.00
+Subtotal               ₹7,400.00
+Tax (8.5%)               ₹629.00
 
-TOTAL DUE              $8,029.00`;
+TOTAL DUE              ₹8,029.00`;
 
   return (
     <section className="py-20 px-6 bg-gray-50 dark:bg-slate-900">
@@ -525,20 +525,20 @@ TOTAL DUE              $8,029.00`;
                 <div className="border-t border-dashed border-gray-200 dark:border-slate-600 pt-3 space-y-1 text-[9px]">
                   <div className="flex justify-between">
                     <span>Design System Audit</span>
-                    <span>$2,400</span>
+                    <span>₹2,400</span>
                   </div>
                   <div className="flex justify-between">
                     <span>UI Component Library</span>
-                    <span>$3,800</span>
+                    <span>₹3,800</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Accessibility Review</span>
-                    <span>$1,200</span>
+                    <span>₹1,200</span>
                   </div>
                 </div>
                 <div className="border-t border-gray-200 dark:border-slate-600 mt-3 pt-3 flex justify-between text-[10px] font-bold text-slate-800 dark:text-slate-100">
                   <span>TOTAL DUE</span>
-                  <span>$8,029.00</span>
+                  <span>₹8,029.00</span>
                 </div>
               </div>
             </div>
@@ -851,36 +851,44 @@ function CTASection() {
 // ---------------------------------------------------------------------------
 function Footer() {
   return (
-    <footer className="border-t border-gray-100 dark:border-slate-800 py-10 px-6 bg-white dark:bg-slate-950">
-      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-          <div className="w-6 h-6 bg-blue-600 rounded-md flex items-center justify-center">
-            <ScanText className="w-3.5 h-3.5 text-white" />
-          </div>
-          <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-            PureParse
-          </span>
-          <span className="text-slate-300 dark:text-slate-600 text-sm">·</span>
-          <span className="text-xs text-slate-400 dark:text-slate-500">
-            © {new Date().getFullYear()} All rights reserved.
-          </span>
-          <span className="text-slate-300 dark:text-slate-600 text-sm">·</span>
-          <span className="text-xs text-slate-400 dark:text-slate-500">
-            Made with love by{" "}
-            <span className="font-medium text-slate-600 dark:text-slate-300">Daron John</span>
-          </span>
+    <footer className="border-t border-gray-100 dark:border-slate-800 py-8 px-6 bg-white dark:bg-slate-950">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* Brand & Copyright */}
+        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 text-center sm:text-left">
+          <a href="#" className="flex items-center gap-2 group">
+            <div className="w-6 h-6 bg-blue-600 rounded-md flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
+              <ScanText className="w-3.5 h-3.5 text-white" />
+            </div>
+            <span className="text-sm font-semibold text-slate-800 dark:text-slate-200 tracking-tight">
+              PureParse
+            </span>
+          </a>
+
+          <div className="hidden sm:block h-3.5 w-px bg-gray-200 dark:bg-slate-800" />
+
+          <p className="text-xs text-slate-400 dark:text-slate-500 flex flex-wrap items-center justify-center sm:justify-start gap-1.5">
+            <span>© {new Date().getFullYear()} All rights reserved</span>
+            <span className="text-slate-300 dark:text-slate-700">·</span>
+            <span>
+              Made with ❤️ by{" "}
+              <span className="font-medium text-slate-600 dark:text-slate-300">
+                Daron John
+              </span>
+            </span>
+          </p>
         </div>
 
+        {/* Links & Social */}
         <div className="flex items-center gap-6">
           <a
             href="#"
-            className="text-xs text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 transition-colors duration-150"
+            className="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 transition-colors duration-150"
           >
             Privacy
           </a>
           <a
             href="#"
-            className="text-xs text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 transition-colors duration-150"
+            className="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 transition-colors duration-150"
           >
             Terms
           </a>
@@ -888,7 +896,7 @@ function Footer() {
             href="https://github.com/DaronJohn/PureParse"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 transition-colors duration-150"
+            className="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 transition-colors duration-150"
           >
             GitHub
           </a>
@@ -897,7 +905,7 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="X (Twitter)"
-            className="text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 transition-colors duration-150"
+            className="inline-flex items-center justify-center text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 transition-colors duration-150"
           >
             <XIcon className="w-4 h-4" />
           </a>
